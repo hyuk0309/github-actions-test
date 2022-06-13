@@ -1,0 +1,8 @@
+|===
+|Path|Type|Description
+
+|`+originUrl+`
+|`+String+`
+|원본 URL
+
+|===

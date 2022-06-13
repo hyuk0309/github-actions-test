@@ -1,0 +1,8 @@
+|===
+|Path|Type|Description
+
+|`+shortUrl+`
+|`+String+`
+|단축 URL
+
+|===
