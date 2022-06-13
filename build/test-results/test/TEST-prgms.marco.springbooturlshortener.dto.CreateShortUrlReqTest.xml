@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="prgms.marco.springbooturlshortener.dto.CreateShortUrlReqTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-13T13:50:11" hostname="hyuks-MacBookPro.local" time="0.126">
-  <properties/>
-  <testcase name="originalUrl 포멧 검증 성공" classname="prgms.marco.springbooturlshortener.dto.CreateShortUrlReqTest" time="0.076"/>
-  <testcase name="[1] " classname="prgms.marco.springbooturlshortener.dto.CreateShortUrlReqTest" time="0.021"/>
-  <testcase name="[2] " classname="prgms.marco.springbooturlshortener.dto.CreateShortUrlReqTest" time="0.006"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
