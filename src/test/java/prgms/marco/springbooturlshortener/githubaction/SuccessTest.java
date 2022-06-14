@@ -12,6 +12,7 @@ class SuccessTest {
 
     @Test
     void failTest() {
+
         Assertions.assertThat(false).isTrue();
     }
 }
