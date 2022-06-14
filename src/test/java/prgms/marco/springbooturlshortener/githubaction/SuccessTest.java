@@ -9,9 +9,4 @@ class SuccessTest {
     void successTest() {
         Assertions.assertThat(true).isTrue();
     }
-
-    @Test
-    void failTest() {
-        Assertions.assertThat(false).isTrue();
-    }
 }
