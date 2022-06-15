@@ -5,8 +5,10 @@ import org.junit.jupiter.api.Test;
 
 class SuccessTest {
 
-    @Test
-    void successTest() {
-        Assertions.assertThat(true).isTrue();
-    }
+	@Test
+	void successTest() {
+
+
+		Assertions.assertThat(true).isTrue();
+	}
 }

@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'org.asciidoctor.jvm.convert' version '3.3.0'
+    id 'checkstyle'
 }
 
 group = 'prgms.marco'
@@ -13,6 +14,12 @@ asciidoctor {
     sourceDir 'src/main/asciidoc'
     attributes \
 		'snippets': file('target/snippets')
+}
+
+checkstyle {
+    maxWarnings = 0 // 규칙이 어긋나는 코드가 하나라도 있을 경우 빌드 fail을 내고 싶다면 이 선언을 추가한다.
+    configFile = file("${rootDir}/config/checkstyle/naver-checkstyle-rules.xml")
+    toolVersion ="8.24"  // checkstyle 버전 8.24 이상 선언
 }
 
 repositories {
