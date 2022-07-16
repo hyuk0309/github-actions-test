@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew clean build
 
       ## docker build & push to dockerhub
-      - names: Docker build & push to dockerhub
+      - name: Docker build & push to dockerhub
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker build -t ${{ secrets.DOCKER_REPO }}/shorturl .
