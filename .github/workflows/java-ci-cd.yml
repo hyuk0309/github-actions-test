@@ -57,6 +57,5 @@ jobs:
           timeout: 60s
           script: |
             sudo docker remove -f $(docker ps -qa)
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/shorturl
             docker-compose up -d
             docker image prune -f
