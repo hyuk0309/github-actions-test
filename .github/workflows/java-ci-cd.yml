@@ -39,23 +39,23 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
-      ## docker build & push to dockerhub
-      - name: Docker build & push to dockerhub
-        run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker build -t ${{ secrets.DOCKER_REPO }}/shorturl .
-          docker push ${{ secrets.DOCKER_REPO }}/shorturl
+#      ## docker build & push to dockerhub
+#      - name: Docker build & push to dockerhub
+#        run: |
+#          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+#          docker build -t ${{ secrets.DOCKER_REPO }}/shorturl .
+#          docker push ${{ secrets.DOCKER_REPO }}/shorturl
 
-      ## deploy to ec2
-      - name: Deploy to ec2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.EC2_ENDPOINT }}
-          username: ${{ secrets.EC2_USERNAME }}
-          password: ${{ secrets.EC2_PASSWORD }}
-          port: 22
-          script: |
-            sudo docker remove -f $(docker ps -qa)
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/shorturl
-            docker-compose up -d
-            docker image prune -f
+#      ## deploy to ec2
+#      - name: Deploy to ec2
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.EC2_ENDPOINT }}
+#          username: ${{ secrets.EC2_USERNAME }}
+#          password: ${{ secrets.EC2_PASSWORD }}
+#          port: 22
+#          script: |
+#            sudo docker remove -f $(docker ps -qa)
+#            sudo docker pull ${{ secrets.DOCKER_REPO }}/shorturl
+#            docker-compose up -d
+#            docker image prune -f
