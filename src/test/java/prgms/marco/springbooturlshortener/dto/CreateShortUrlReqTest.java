@@ -28,7 +28,7 @@ class CreateShortUrlReqTest {
 			validator.validate(createShortUrlReq);
 
 		//then
-		assertThat(validate).isNotEmpty();
+		assertThat(validate).isEmpty();
 	}
 
 	@ParameterizedTest
