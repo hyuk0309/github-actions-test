@@ -43,7 +43,6 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          author_name: Integration Test # default: 8398a7@action-slack
           fields: repo,message,commit,author, pullRequest # selectable (default: repo,message)
           mention: here
           if_mention: failure,cancelled
