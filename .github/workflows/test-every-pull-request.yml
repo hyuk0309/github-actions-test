@@ -12,7 +12,6 @@ permissions:
 jobs:
   test:
     name: Test lint, tsc, build
-
     runs-on: ubuntu-latest
 
     steps:
