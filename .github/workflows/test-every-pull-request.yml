@@ -39,7 +39,7 @@ jobs:
         run: ./gradlew clean build
 
       ## slack notification
-      - name: GitHub Actions Pull Request
+      - name: GitHub Actions Pull Request Notification
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
